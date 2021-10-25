@@ -1,6 +1,6 @@
 https://1clide1.github.io/Basic-Password-Generator/
 
-https://github.com/1Clide1/Basic-Password-Generator/blob/9909f02b8a75b0f18faba0f29d13441864143186/Assets/pass%20screenshot.png
+![Pass Generator](Assets/pass screenshot.png)
 # Basic-Password-Generator
 
 Hello my name is Brandon, and this is my project about making a basic password generator. I mainly wrote this to help myself improve at coding specically with this I used javascript. I used what I learned from class and really put it to action for this website.
