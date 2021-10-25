@@ -1,33 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 // set of all the arrays
-var lowerCasePswrd= ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'z', 'x', 'c', 'v', 'b','n', 'm'];
-  var upperCasePswrd= ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M'];
-  var numberPswrd= ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-  var specialCharPswrd= ['@',
-'%',
-'+',
-'\\',
-'/',
-"'",
-'!',
-'#',
-'$',
-'^',
-'?',
-':',
-',',
-')',
-'(',
-'}',
-'{',
-']',
-'[',
-'~',
-'-',
-'_',
-'.'
-];
+// had to fix my arrays into a single string to remove un-need commas
+  var lowerCasePswrd= ["asdfghjklqwertyuiopzxcvbnm"];
+  var upperCasePswrd= ["QWERTYUIOPASDFGHJKLZXCVBNM"];
+  var numberPswrd= ["1234567890"];
+  var specialCharPswrd= ["@%+\\/'!#$^?:,)(}{][~-_."];
 
 function generatePassword(userChoices) {
   // empty string to hold the generated password
@@ -35,6 +13,7 @@ function generatePassword(userChoices) {
   // set defualt to lowercase since without it you wont get a password
   let allChars = lowerCasePswrd;
 //  if uppercase is true
+//.push just means that I am pushing from upperCasePswrd to allChars if I select I want uppercase in the confirm, same with each if statement down the line
   if (userChoices.upperCase=== true){
   allChars.push(upperCasePswrd)}
 // if numbers are true
@@ -43,7 +22,7 @@ function generatePassword(userChoices) {
 // if special char is true
   if (userChoices.specialChar===true){
   allChars.push(specialCharPswrd)}
-
+// assigned all chars to .join that way it can automatically seperate the grouped strings by each character and adds commas to them 
   allChars = allChars.join('')
 // sets the loop to create the password length i had to use the full string assigned and not just plength to determine the actual length size that really stumped me haha
 // chat.At makes sure it starts from 0,1,2, etc and math.floor rounds up math. random to a full number and not just a decimal
